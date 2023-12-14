@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>예약 사이트</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+       background-color: rgb(250, 255, 230);
+    }   
+    .content {
+      flex: 1;
+      background-color: #f4f4f4;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .center-container {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .center-container button {
+      background-color: #f7ff60;
+      color: rgb(0, 0, 0);
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1em 0;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    form {
+      max-width: 400px;
+      margin: auto;
+      background-color: #f4f4f4;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>예약 사이트</h1>
+  </header>
+
+  <section>
+    <form id="reservationForm">
+      <label for="name">이름:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">이메일:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="date">주소:</label>
+      <input type="place" id="place" name="place" required>
+
+      <label for="time">요청 사항:</label>
+      <input type="mention" id="mention" name="mention" required>
+
+ 
+
+      <button type="button" onclick="submitReservation()">예약하기</button>
+    </form>
+  </section>
+
+  <div class="center-container">
+    <button onclick="goToAnotherPage()">메인화면으로 가기</button>
+  </div>
+
+<script>
+
+  function goToAnotherPage() {
+      // 실제로는 이동할 페이지의 URL로 변경하세요.
+      window.location.href = 'mennu.html';
+    }
+    function submitReservation() {
+      // 여기에서 예약 정보를 가져와서 처리하는 로직을 작성합니다.
+      // 실제로는 서버와 통신하여 데이터베이스에 예약 정보를 저장하는 방식을 고려해야 합니다.
+      alert("예약이 완료되었습니다!");
+    }
+  </script>
+
+</body>
+</html>
